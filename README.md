@@ -29,7 +29,12 @@ Install python and use the package manager [pip](https://pip.pypa.io/en/stable/)
 $ pip install -r requirements.txt
 ```
 Store the files in the proposed folder structure.
-Navigate to the directory and run the ```main.py``` file.
+Navigate to the directory and run the ```model.py``` file.
+```bash
+$ python run model.py
+```
+This should save a trained pytorch model ```model_0.1.0.pt``` in the directory. This will be used by the main file later.
+Then run the ```main.py``` file:
 
 ```bash
 $ python run main.py
@@ -62,7 +67,7 @@ $curl -X POST http://127.0.0.1:5000/process_image -d "{\"image_name\":\"<path_to
 
 ## Training
 
-A pre-trained pytorch model is also part of the repo ```model_0.1.0.pt```. The ```./train/train_example.py``` is an example on how to fine tune the sentence similarity model using the [QQP triplets](https://huggingface.co/datasets/embedding-data/QQP_triplets) dataset. However, in the case of the API service this was note used. This is just provided as an option for the user, if the relevant data is avaiable, the model can be fine-tuned to a specific task for better performance.
+The flask API uses pre-trained models. The ```./train/train_example.py``` is an example on how to fine tune the sentence similarity model using the [QQP triplets](https://huggingface.co/datasets/embedding-data/QQP_triplets) dataset. However, in the case of the API service this was note used. This is just provided as an option for the user, if the relevant data is avaiable, the model can be fine-tuned to a specific task for better performance.
 
 
 ## License
