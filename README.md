@@ -3,8 +3,8 @@
 This is a small Flask API application with one API that serves a pytoch model which calculates similarity between text and image captions.
 The models used are from the hugging face library and use the [ViT-GPT2](https://huggingface.co/nlpconnect/vit-gpt2-image-captioning) transformer model for image captioning and [Sentence transformers](https://www.sbert.net/) 
 for encoding the text sentences.
-The image example is from the Flickr8k dataset.
-The two models are pre-trained and wrapped within a pytorch module in order to enable training both models as a one pytorch model.
+The image example is from the [Flickr8k](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset) dataset.
+The two models are pre-trained and wrapped within a Pytorch module in order to enable training both models as a one Pytorch model.
 A training example for the sentence transformer is also given for fine-tuning.
 
 ## Folder structure
