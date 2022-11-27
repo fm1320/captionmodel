@@ -11,14 +11,14 @@ A training example for the sentence transformer is also given for fine-tuning.
 
 ```bash
 .
-├── ./model/
-│   ├── ./model/main.py
-│   ├── ./model/model.py
-│   ├── ./model/model_0.1.0.pt
-│   ├── ./model/requirements.txt
-│   └── ./model/img_1.jpg
-└── ./train/
-    └── ./train/train_example.py
+├── ./artifacts/
+│   └── ./artifacts/img_1.jpg
+├── ./scripts/
+│   ├── ./scripts/app.py
+│   └── ./scripts/model.py
+├── ./train/
+│   └── ./train/train_example.py
+└── ./requirements.txt
 ```
 
 ## How to run
@@ -30,14 +30,15 @@ $ pip install -r requirements.txt
 ```
 Store the files in the proposed folder structure.
 Navigate to the directory and run the ```model.py``` file.
-```bash
-$ python run model.py
-```
-This should save a trained pytorch model ```model_0.1.0.pt``` in the directory. This will be used by the main file later.
-Then run the ```main.py``` file:
 
 ```bash
-$ python run main.py
+$ python model.py
+```
+This should save a trained pytorch model ```model_0.1.0.pt``` in the directory. This will be used by the Flask app file later.
+Then run the ```app.py``` file:
+
+```bash
+$ python app.py
 ```
 After running this file you should see the flask server running
 and see something along the lines of:
