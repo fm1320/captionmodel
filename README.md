@@ -1,6 +1,6 @@
 # Caption model for similarity
 
-This is a small Flask API application with one API that serves a pytoch model which calculates similarity between text and image captions.
+This is a small Flask API application with one API that serves a Pytorch model which calculates similarity between text and image captions.
 The models used are from the hugging face library and use the [ViT-GPT2](https://huggingface.co/nlpconnect/vit-gpt2-image-captioning) transformer model for image captioning and [Sentence transformers](https://www.sbert.net/) 
 for encoding the text sentences.
 The image example is from the [Flickr8k](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset) dataset.
@@ -63,7 +63,7 @@ If you want to run the model with your own custom image and text, the following 
 $curl -X POST http://127.0.0.1:5000/process_image -d "{\"image_name\":\"<path_to_image_file>\",\"text\":\"<Example text 1>,<Example text 2>,<Example text 3>\"}" -H "Content-Type: application/json"
 ```
 
-* If dobule quotes are used for the curl command parameters, escape charaacters should be also used for the double quotes inside the JSON data
+* If double quotes are used for the curl command parameters, escape characters should be used for the double quotes inside the JSON data.
 
 
 ## Training
