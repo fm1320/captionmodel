@@ -63,13 +63,12 @@ def process_image(image_paths):
   return images
  
 model_obj = Task_Model()
- 
-__version__ = "0.1.0"
- 
-BASE_DIR = Path(__file__).resolve(strict=True).parent
- 
+
+__version__ = "0.1.0" 
+BASE_DIR = Path(__file__).resolve(strict=True).parent 
 PATH =f"{BASE_DIR}/model_{__version__}.pt"
- 
+
+torch.save(model_obj.state_dict(), PATH) 
 model_obj.load_state_dict(torch.load(PATH))
  
 images1= process_image([f"{BASE_DIR}/img_1.jpg"]) 
@@ -79,12 +78,11 @@ sentences2 = ['Car driving outside',
               'The dog running ']          # This are just example sentences that are compared to the image captioon
               
 result=model_obj.forward(images1,sentences2)
- 
-print(result) # Prints the cosine similarity
- 
-#################################################################################
-#################################################################################
-#################################################################################
+
+# Prints the cosine similarity 
+#print(result) 
+
  
 
-#curl -X POST http://127.0.0.1:5000/process_image -d "{\"image_name\":\"img_1.jpg\",\"text\":\"Car driving outside,A girl playing tennis,The dog running\"}" -H "Content-Type: application/json"
+ 
+
