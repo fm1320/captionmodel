@@ -23,7 +23,7 @@ A training example for the sentence transformer is also given for fine-tuning.
 
 ## How to run
 
-Install python and use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required packages.
+Install [python](https://www.python.org/downloads/) and use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required packages.
 
 ```bash
 $ pip install -r requirements.txt
